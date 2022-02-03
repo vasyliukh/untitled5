@@ -1,14 +1,20 @@
+// eslint-disable-next-line
+/* eslint-disable */
 <template>
-<div class="button1">
-
-  <button @click="back" type="button" class="btn btn-success">РЕЄСТРАЦІЯ</button>
-  <button type="button" class="btn btn-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ВХІД&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-  <router-link tag="b-nav-item" to="register_gorm"></router-link>
-</div>
+  <div class="button1">
+    <div class="circle">
+      <img alt="NULP logo" src="./NULP_LOGO_UKR.jpg" class="round" width="415" height="400" >
+    </div>
+    <div class="title1">
+      <b style="background:white">ВИПУСКНИК NULP</b>
+    </div>
+    <button @click="back" type="button" class="btn btn-success">РЕЄСТРАЦІЯ</button>
+    <button type="button" class="btn btn-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ВХІД&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+    <router-link tag="b-nav-item" to="register_form"></router-link>
+  </div>
 </template>
-
 <script>
-import register_form from "@/components/register_form";
+
 
 export default {
   methods:{
@@ -21,6 +27,21 @@ export default {
 </script>
 
 <style>
+body{
+  background: url("panorama.jpg");
+}
+.round {
+  border-radius: 50%;
+  display: block;
+  margin: 40px auto;
+}
+
+.title1{
+  font-family:HeliosCondLight,sans-serif;
+  letter-spacing: 4px;
+  font-size: 45px;
+  text-align: center;
+}
 .button1{
   text-align: center;
   margin: 40px auto;

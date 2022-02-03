@@ -1,14 +1,15 @@
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import Router from 'vue-router'
 import app from "./App";
-import register_form from "./components/register_form";
 
 
-export default new VueRouter(
+Vue.use(Router)
+
+export default new Router(
     {
         routes:[
             {path:'./', component:app},
-            {path:'./register', name:'register', component:register_form}
+            {path:'./register', name:'register', component:()=>import('./components/register_form')}
         ],
         mode:'history'
     })
-
